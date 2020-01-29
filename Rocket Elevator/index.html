@@ -44,6 +44,14 @@
         object-fit: cover;
       }
 
+      .logoimage{
+        width: 180px;
+        height: 100px;
+        line-height: 100px;
+        vertical-align: middle;
+        object-fit: contain;
+      }
+
     </style>
   </head>
 
@@ -1078,43 +1086,63 @@
 
           <ul class="row clients-dotted list-inline">
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/1.jpg" alt="client" />
+              <a href="https://www.amazon.ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/amazon.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/2.jpg" alt="client" />
+              <a href="https://www.ebay.ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/ebay.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/3.jpg" alt="client" />
+              <a href="https://www.ge.com/ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/GE.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/4.jpg" alt="client" />
+              <a href="https://www.hilton.com/en/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/hilton.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/5.jpg" alt="client" />
+              <a href="https://www8.hp.com/ca/en/home.html" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/HP.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/6.jpg" alt="client" />
+              <a href="https://www.airbnb.ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/airbnb.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/7.jpg" alt="client" />
+              <a href="https://www.intel.ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/intel.png" alt="client" />
               </a>
             </li>
             <li class="col-md-3 col-sm-3 col-6">
-              <a href="#">
-                <img class="img-fluid" src="demo_files/images/brands/8.jpg" alt="client" />
+              <a href="https://www.spotify.com/ca-en/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/spotify.png" alt="client" />
+              </a>
+            </li>
+            <li class="col-md-3 col-sm-3 col-6">
+              <a href="https://www.pepsi.ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/pepsi.png" alt="client" />
+              </a>
+            </li>
+            <li class="col-md-3 col-sm-3 col-6">
+              <a href="https://www.samsung.com/ca/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/samsung.png" alt="client" />
+              </a>
+            </li>
+            <li class="col-md-3 col-sm-3 col-6">
+              <a href="https://www.toyota.ca/toyota/en/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/toyota.png" alt="client" />
+              </a>
+            </li>
+            <li class="col-md-3 col-sm-3 col-6">
+              <a href="https://discordapp.com/" target="blank">
+                <img class="img-fluid logoimage" src="assets/re_assets/clients/discord.png" alt="client" />
               </a>
             </li>
           </ul>
@@ -1132,7 +1160,7 @@
 
           <header class="text-center mb-60">
             <h2>Contact Us</h2>
-            <p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+            <p class="lead font-lato">Ready for your project to reach new heights?</p>
             <hr />
           </header>
 
@@ -1200,29 +1228,36 @@
                         <input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
                       </div>
                       <div class="col-md-4">
-                        <label for="contact:email">E-mail Address *</label>
-                        <input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+                        <label for="contact:business_name">Business Name</label>
+                        <input type="text" value="" class="form-control" name="contact[business_name]" id="contact:business_name">
                       </div>
                       <div class="col-md-4">
-                        <label for="contact:phone">Phone</label>
-                        <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+                        <label for="contact:phone">Phone *</label>
+                        <input required type="text" value="" class="form-control" name="contact[phone][required]" id="contact:phone">
                       </div>
                   </div>
                   <div class="row">
                       <div class="col-md-8">
-                        <label for="contact:subject">Subject *</label>
-                        <input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+                        <label for="contact:project_name">Project Name *</label>
+                        <input required type="text" value="" class="form-control" name="contact[project_name][required]" id="contact:project_name">
                       </div>
                       <div class="col-md-4">
                         <label for="contact_department">Department</label>
                         <select class="form-control pointer" name="contact[department]">
                           <option value="">--- Select ---</option>
-                          <option value="Marketing">Marketing</option>
-                          <option value="Webdesign">Webdesign</option>
-                          <option value="Architecture">Architecture</option>
+                          <option value="Residential">Residential</option>
+                          <option value="Corporate">Corporate</option>
+                          <option value="Hybrid">Hybrid</option>
                         </select>
                       </div>
                   </div>
+                  <div class="row">
+                      <div class="col-md-4">
+                        <label for="contact:email">Email *</label>
+                        <input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+                      </div>
+                  </div>
+                </div>
                   <div class="row">
                       <div class="col-md-12">
                         <label for="contact:message">Message *</label>
