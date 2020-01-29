@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+							<li><b>Phone:</b> 1-800-565-2390</li>
+							<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky transparent dark clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- BUTTONS -->
+						<ul class="float-right nav nav-pills nav-second-main">
+
+							<!-- SEARCH -->
+							<li class="search">
+								<a href="javascript:;">
+									<i class="fa fa-search"></i>
+								</a>
+								<div class="search-box">
+									<form action="page-search-result-1.html" method="get">
+										<div class="input-group">
+											<input type="text" name="src" placeholder="Search" class="form-control" />
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="submit">Search</button>
+											</span>
+										</div>
+									</form>
+								</div> 
+							</li>
+							<!-- /SEARCH -->
+
+						</ul>
+						<!-- /BUTTONS -->
+
+						<!-- Logo -->
+						<a class="logo float-left" href="index.html">
+							<img src="assets/re_assets/R2.png" alt="Rocket Elevator Logo" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">
+									<li>
+										<a href="index.html">
+											HOME
+										</a>
+									</li>
+									<li class="dropdown active"><!-- PAGES -->
+										<a class="dropdown-toggle" href="./index.html#services">
+											SERVICES
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown">
+												<a href="residential.html">
+													RESIDENTIAL
+												</a>
+											</li>
+											<li class="dropdown">
+												<a href="corporate.html">
+													CORPORATE
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="./index.html#portfolio">
+											PORTFOLIO
+										</a>
+									<li>
+										<a href="./index.html#news">
+											NEWS
+										</a>
+									</li>
+									<li>
+										<a href="./index.html#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li class="dropdown mega-menu"><!-- SHORTCODES -->
+										<a class="dropdown-toggle" href="#">
+											SHORTCODES
+										</a>
+										<ul class="dropdown-menu">
+											<li>
+												<div class="row">
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-animations.html">ANIMATIONS</a></li>
+															<li><a href="shortcode-buttons.html">BUTTONS</a></li>
+															<li><a href="shortcode-carousel.html">CAROUSEL</a></li>
+															<li><a href="shortcode-charts.html">GRAPHS</a></li>
+															<li><a href="shortcode-clients.html">CLIENTS</a></li>
+															<li><a href="shortcode-columns.html">GRID &amp; COLUMNS</a></li>
+															<li><a href="shortcode-counters.html">COUNTERS</a></li>
+															<li><a href="shortcode-forms.html">FORM ELEMENTS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-dividers.html">DIVIDERS</a></li>
+															<li><a href="shortcode-icon-boxes.html">BOXES &amp; ICONS</a></li>
+															<li><a href="shortcode-galleries.html">GALLERIES</a></li>
+															<li><a href="shortcode-headings.html">HEADING STYLES</a></li>
+															<li><a href="shortcode-icon-lists.html">ICON LISTS</a></li>
+															<li><a href="shortcode-labels.html">LABELS &amp; BADGES</a></li>
+															<li><a href="shortcode-lightbox.html">LIGHTBOX</a></li>
+															<li><a href="shortcode-forms-editors.html">HTML EDITORS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-cards.html">Cards</a></li>
+															<li><a href="shortcode-maps.html"><span class="badge badge-success float-right">new</span> MAPS</a></li>
+															<li><a href="shortcode-media-embeds.html">MEDIA EMBEDS</a></li>
+															<li><a href="shortcode-modals.html">MODAL / POPOVER / NOTIF</a></li>
+															<li><a href="shortcode-navigations.html">NAVIGATIONS</a></li>
+															<li><a href="shortcode-paginations.html">PAGINATIONS</a></li>
+															<li><a href="shortcode-progress-bar.html">PROGRESS BARS</a></li>
+															<li><a href="shortcode-widgets.html">WIDGETS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-pricing.html">PRICING BOXES</a></li>
+															<li><a href="shortcode-process-steps.html">PROCESS STEPS</a></li>
+															<li><a href="shortcode-callouts.html">CALLOUTS</a></li>
+															<li><a href="shortcode-info-bars.html">INFO BARS</a></li>
+															<li><a href="shortcode-blockquotes.html">BLOCKQUOTES</a></li>
+															<li><a href="shortcode-responsive.html">RESPONSIVE</a></li>
+															<li><a href="shortcode-sections.html">SECTIONS</a></li>
+															<li><a href="shortcode-social-icons.html">SOCIAL ICONS</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><a href="shortcode-alerts.html">ALERTS</a></li>
+															<li><a href="shortcode-styled-icons.html">STYLED ICONS</a></li>
+															<li><a href="shortcode-tables.html">TABLES</a></li>
+															<li><a href="shortcode-tabs.html">TABS</a></li>
+															<li><a href="shortcode-testimonials.html">TESTIMONIALS</a></li>
+															<li><a href="shortcode-thumbnails.html">THUMBNAILS</a></li>
+															<li><a href="shortcode-toggles.html">TOGGLES</a></li>
+															<li><a href="shortcode-material-design-badges.html"><span class="badge badge-danger float-right">new</span> <b>MATERIAL DESIGN</b></a></li>
+														</ul>
+													</div>
+
+												</div>
+											</li>
+										</ul>
+									</li>
+
+
+
+									<!-- 
+										MENU ANIMATIONS
+											.nav-animate-fadeIn
+											.nav-animate-fadeInUp
+											.nav-animate-bounceIn
+											.nav-animate-bounceInUp
+											.nav-animate-flipInX
+											.nav-animate-flipInY
+											.nav-animate-zoomIn
+											.nav-animate-slideInUp
+
+											.nav-hover-animate 		= animate text on hover
+
+											.hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+									-->
+									<li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
+										<a class="dropdown-toggle noicon" href="#">
+											<span class="badge badge-danger float-right fs-11">v2</span>
+											<b>NEW</b>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-clean">
+											<li>
+												<div class="row">
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>PACKS : READY TO USE</span></li>
+															<li class="divider"></li>
+															<li>
+																<span class="fs-11 mt-0 pb-15 pt-15 text-info">NEW AND HOT: COMPLETE PACKAGES READY TO USE</span>
+															</li>
+															<li class="divider"></li>
+															<li><a target="_blank" href="pack-realestate-home-1.html">REAL ESTATE</a></li>
+															<li><a target="_blank" href="pack-megashop-home-1.html">MEGA SHOP</a></li>
+															<li><a target="_blank" href="pack-hotel-home-1.html">HOTEL v1</a></li>
+															<li><a target="_blank" href="pack-hotel-v2-home-1.html">HOTEL v2</a></li>
+															<li><a target="_blank" href="pack-photography-home-1.html">PHOTOGRAPHY / PORTFOLIO</a></li>
+															<li><a target="_blank" href="pack-caffe-home-1.html">CAFFE</a></li>
+															<li><a target="_blank" href="pack-caffe-onepage.html">CAFFE - ONEPAGE</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>NEW PAGES</span></li>
+															<li><a target="_blank" href="portfolio-single-project.html">PORTFOLIO SINGLE</a></li>
+															<li><a target="_blank" href="page-cookie-alert.html">COOKIE ALERT</a></li>
+															<li><a target="_blank" href="page-category.html">CATEGORY PAGE</a></li>
+
+															<li><span>IMPROVED</span></li>
+															<li><a target="_blank" href="index-thematics-hosting.html">HOMEPAGE : <b>HOSTING</b></a></li>
+															<li><a target="_blank" href="index-thematics-restaurant.html">HOMEPAGE : <b>RESTAURANT</b></a></li>
+															<li><a target="_blank" href="index-thematics-lawyer.html">HOMEPAGE : <b>LAWYER</b></a></li>
+															<li><a target="_blank" href="index-thematics-fashion.html">HOMEPAGE : <b>FASHION</b></a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-5th">
+														<ul class="list-unstyled">
+															<li><span>NEW COMPONENTS</span></li>
+															<li><a target="_blank" href="shortcode-material-design-badges.html">MATERIAL DESIGN LITE</a></li>
+
+															<li><span>NEW FEATURES</span></li>
+															<li><a target="_blank" href="feature-menu-12.html">NEW HEADER/MENU</a></li>
+															<li><a target="_blank" href="feature-menu-dd-effects.html">MENU DROPDOWN EFFECTS</a></li>
+															<li><a target="_blank" href="shortcode-carousel-2.html">OWL CAROUSEL 2</a></li>
+															<li><a target="_blank" href="shortcode-thumbnails.html">IMAGE HOVER/STYLES</a></li>
+														</ul>
+													</div>
+
+													<div class="col-md-6 hidden-sm text-center">
+														<div class="p-15 block">
+															<img class="img-fluid" src="demo_files/images/new_menu.png" alt="" />
+														</div>
+														<p class="menu-caption hidden-xs-down text-muted text-center">
+															THE MOST COMPLETE HTML TEMPLATE
+														</p>
+													</div>
+
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- 
+				PAGE HEADER 
+				
+				CLASSES:
+					.page-header-xs	= 20px margins
+					.page-header-md	= 50px margins
+					.page-header-lg	= 80px margins
+					.page-header-xlg= 130px margins
+					.dark			= dark page header
+
+					.shadow-before-1 	= shadow 1 header top
+					.shadow-after-1 	= shadow 1 header bottom
+					.shadow-before-2 	= shadow 2 header top
+					.shadow-after-2 	= shadow 2 header bottom
+					.shadow-before-3 	= shadow 3 header top
+					.shadow-after-3 	= shadow 3 header bottom
+			-->
+			<section class="page-header parallax parallax-4" style="background-image:url('demo_files/images/spotted.jpg')">
+				<div class="overlay dark-0"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<h1>PAGE NOT FOUND</h1>
+
+					<!-- breadcrumbs -->
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Pages</a></li>
+						<li class="active">Error 404</li>
+					</ol><!-- /breadcrumbs -->
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!-- -->
+			<section class="section-xlg">
+				<div class="container">
+					
+					<div class="row">
+
+						<div class="col-md-6 col-sm-6 hidden-xs-down">
+							
+							<div class="error-404">
+								404
+							</div>
+						
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+						
+							<h3 class="m-0">Sorry, <strong>The page you requested can not be found!</strong></h3>
+							<p class="mt-0 fs-20 font-lato text-muted">Please, search again using more specific keywords.</p>
+
+							<!-- INLINE SEARCH -->
+							<div class="inline-search clearfix mb-60">
+								<form action="" method="get" class="widget_search">
+									<input type="search" placeholder="Search..." id="s" name="s" class="serch-input">
+									<button type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+									<div class="clear"></div>
+								</form>
+							</div>
+							<!-- /INLINE SEARCH -->
+
+							<div class="divider mb-0"><!-- divider --></div>
+
+							<a class="fs-16 font-lato" href="index.html"><i class="glyphicon glyphicon-menu-left mr-10 fs-12"></i> back to Smarty homepage now!</a>
+
+						</div>
+
+					</div>
+					
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+		
+		
+				  <div class="row">
+		
+					<!-- col #1 -->
+					<div class="col-md-8">
+		
+					  <h3 class="letter-spacing-1">WHY US?</h3>
+		
+					  <!-- Small Description -->
+					  <p>
+						A family owned business in operation since 1976 is a business you can trust. We believe that the quality of our products and services
+						speak for themselves, and we think you'll agree. Find out why so many have made <strong>Rocket Elevators</strong> their trusted consultant for everything elevators.
+					  </p>
+					  <h2>1 (800) 555-1234</h2>
+					</div>
+					<!-- /col #1 -->
+		
+					<!-- col #2 -->
+					<div class="col-md-4">
+					  <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+		
+					  <!-- Newsletter Form -->
+					  <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+		
+					  <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+						<div class="input-group">
+						  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+						  <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+						  <span class="input-group-btn">
+							<button class="btn btn-success" type="submit">Subscribe</button>
+						  </span>
+						</div>
+					  </form>
+					  <!-- /Newsletter Form -->
+		
+		
+					</div>
+					<!-- /col #2 -->
+		
+				  </div>
+		
+		
+				</div>
+		
+				<div class="copyright">
+				  <div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+					  <li>Terms &amp; Conditions</li>
+					  <li>&bull;</li>
+					  <li>Privacy</li>
+					</ul>
+					&copy; All Rights Reserved, Rocket Elevators S.E.N.C.
+				  </div>
+				</div>
+		
+			  </footer>
+			  <!-- /FOOTER -->
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>
