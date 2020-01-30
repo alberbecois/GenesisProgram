@@ -223,9 +223,16 @@
                                     <div class="card-heading card-heading-transparent">
                                         <h2 class="card-title bold">Residential</h2>
                                     </div>
-                                    <div class="p-20 fancy-form" id="">
+                                    <div class="p-20">
                                         <label>How many apartments does your building have?</label>
-                                        <input type="text" name="n_apartments" />
+                                        <!-- stepper -->
+                                        <input type="text" value="1" min="1" class="form-control stepper">
+                                        <label class="mt-20">How many floors are there in the building?</label>
+                                        <!-- stepper -->
+                                        <input type="text" value="2" min="2" class="form-control stepper">
+                                        <label class="mt-20">How many basements are there?</label>
+                                        <!-- stepper -->
+                                        <input type="text" value="0" min="0" class="form-control stepper">
                                     </div>
                                 </div>
                                 <div class="col-md-4 ml-20" style="border-left: 1px solid lightgray;">
