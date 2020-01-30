@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Smarty - Multipurpose + Admin</title>
-		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		<title>Rocket Elevators - Product and Installation Estimation</title>
+		<meta name="description" content="Get a quote on our products and services" />
+		<meta name="Author" content="Joshua Knutson" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -203,9 +203,40 @@
 			<section>
 				<div class="container">
 					
-					Content Here...
+                    <div class="card card-default">
+                        <div class="card-heading card-heading-transparent">
+                            <h2 class="card-title bold">Quotation</h2>
+                        </div>
+                        <div class="card-block">
+                            <label>
+                                Project Type
+                            </label>
+                            <select id="project_type" style="width: 250px;">
+                                <option value="null" selected disabled hidden>Select...</option>
+                                <option value ="residential">Residential</option>
+                                <option value ="commercial">Commercial</option>
+                                <option value ="corporate">Corporate</option>
+                                <option value ="hybrid">Hybrid</option>
+                            </select>
+                            <div class="row">
+                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15" id="residential">
+                                    <div class="card-heading card-heading-transparent">
+                                        <h2 class="card-title bold">Residential</h2>
+                                    </div>
+                                    <div class="p-20 fancy-form" id="">
+                                        <label>How many apartments does your building have?</label>
+                                        <input type="text" name="n_apartments" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ml-20" style="border-left: 1px solid lightgray;">
+                                    <p>Content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					
-				</div>
+                </div></div>
+                
 			</section>
 			<!-- / -->
 
