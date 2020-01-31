@@ -258,7 +258,10 @@
                                         <input type="text" value="0" min="0" class="form-control stepper">
                                         <label class="mt-20">How many elevator cages are to be deployed?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="1" min="1" class="form-control stepper">
+										<input type="text" value="1" min="1" class="form-control stepper">
+										<div class="row">
+											<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15">Calculate</button>
+										</div>
                                     </div>
                                 </div>
                                 <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="corporate">
@@ -268,19 +271,23 @@
                                     <div class="p-20">
                                         <label>How many tenant companies does your building accommodate?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="1" min="1" class="form-control stepper">
+                                        <input type="number" value="1" min="1" class="form-control" id="corporatefloors">
                                         <label class="mt-20">How many floors are there in the building?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="2" min="2" class="form-control stepper">
+                                        <input type="number" value="2" min="2" class="form-control" id="corporatebasements">
                                         <label class="mt-20">How many basements are there?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="0" min="0" class="form-control stepper">
+                                        <input type="number" value="0" min="0" class="form-control">
                                         <label class="mt-20">How many parking spaces are available?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="0" min="0" class="form-control stepper">
+                                        <input type="number" value="0" min="0" class="form-control">
                                         <label class="mt-20">What is the maximum number of occupants (capacity) per floor?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="10" min="1" class="form-control stepper">
+										<input type="number" value="10" min="1" class="form-control" id="corporateoccupants">
+										<div class="row">
+											<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="corporatetotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="corporateplural"></span>.</p>
+											<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15">Calculate</button>
+										</div>
                                     </div>
                                 </div>
                                 <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="hybrid">
@@ -290,22 +297,26 @@
                                     <div class="p-20">
                                         <label>How many distinct businesses are there in your building?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="1" min="1" class="form-control stepper">
+                                        <input type="number" value="1" min="1" class="form-control" id="hybridfloors">
                                         <label class="mt-20">How many floors are there in the building?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="2" min="2" class="form-control stepper">
+                                        <input type="number" value="2" min="2" class="form-control" id="hybridbasements">
                                         <label class="mt-20">How many basements are there?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="0" min="0" class="form-control stepper">
+                                        <input type="number" value="0" min="0" class="form-control">
                                         <label class="mt-20">How many parking spaces are available?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="0" min="0" class="form-control stepper">
+                                        <input type="number" value="0" min="0" class="form-control" id="hybridoccupants">
                                         <label class="mt-20">What is the maximum number of occupants (capacity) per floor?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="10" min="1" class="form-control stepper">
+                                        <input type="number" value="10" min="1" class="form-control">
                                         <label class="mt-20">How many hours a day is your building active (open)?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="10" min="1" class="form-control stepper">
+										<input type="number" value="8" min="1" max="24" class="form-control">
+										<div class="row">
+											<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="hybridtotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="hybridplural"></span>.</p>
+											<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15">Calculate</button>
+										</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 ml-25 quoter" style="border-left: 1px solid lightgray;">
