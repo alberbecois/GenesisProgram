@@ -226,16 +226,16 @@
                                     <div class="p-20">
                                         <label>How many apartments does your building have?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="1" min="1" class="form-control stepper">
+                                        <input type="number" value="1" min="1" class="form-control resinput" id="resapartments">
                                         <label class="mt-20">How many floors are there in the building?</label>
                                         <!-- stepper -->
-                                        <input type="text" value="2" min="2" class="form-control stepper">
+                                        <input type="number" value="2" min="2" class="form-control resinput" id="resfloors">
                                         <label class="mt-20">How many basements are there?</label>
                                         <!-- stepper -->
-										<input type="text" value="0" min="0" class="form-control stepper">
+										<input type="number" value="0" min="0" class="form-control resinput">
 										<div class="row">
-											<p class="col-md-6 mt-40 ml-5 bold">We recommend <span id="restotal"></span> elevator<span class="pluelevators"></span>.</p>
-											<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15">Get a Quote!</button>
+											<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="restotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="resplural"></span>.</p>
+											<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15">Calculate</button>
 										</div>
                                     </div>
                                 </div>
