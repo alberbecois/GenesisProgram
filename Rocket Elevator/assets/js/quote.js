@@ -1,5 +1,4 @@
 // Calculate recommended elevators for Residential
-
 function recommendResidential(){
     var floors = $("#resfloors").val();
     var apartments = $("#resapartments").val();
@@ -16,41 +15,22 @@ function recommendResidential(){
     }
 };
 
-// Calculate recommended elevators for Corporate
-
-function recommendCorporate(){
-    var floors = $("corporatefloors").val();
-    var basements = $("corporatebasements").val();
+// Calculate recommended elevators for Corporate or Hybrid
+function recommendElevators(quoteType){
+    var floors = $(`${quoteType}floors`).val();
+    var basements = $(`${quoteType}basements`).val();
     var columns = Math.ceil((floors + basements) / 20);
-    var totalOccupants = floors * ($("corporateoccupants").val());
+    var totalOccupants = floors * ($(`${quoteType}occupants`).val());
     var elevators = Math.ceil(totalOccupants / 1000);
     var totalElevators = Math.ceil(elevators / columns) * columns;
 
     if(totalElevators > 1){
-        document.getElementById("corporatetotal").innerHTML = totalElevators;
-        document.getElementById("corporateplural").innerHTML = "s";
+        document.getElementById(`${quoteType}total`).innerHTML = totalElevators;
+        document.getElementById(`${quoteType}plural`).innerHTML = "s";
     }else {
-        document.getElementById("corporatetotal").innerHTML = "1";
+        document.getElementById(`${quoteType}total`).innerHTML = "1";
     }
-};
-
-// Calculate recommended elevators for Hybrid
-
-function recommendHybrid(){
-    var floors = $("hybridfloors").val();
-    var basements = $("hybridbasements").val();
-    var columns = Math.ceil((floors + basements) / 20);
-    var totalOccupants = floors * ($("hybridoccupants").val());
-    var elevators = Math.ceil(totalOccupants / 1000);
-    var totalElevators = Math.ceil(elevators / columns) * columns;
-
-    if(totalElevators > 1){
-        document.getElementById("hybridtotal").innerHTML = totalElevators;
-        document.getElementById("hybridplural").innerHTML = "s";
-    }else {
-        document.getElementById("hybridtotal").innerHTML = "1";
-    }
-};
+}
 
 // Display appropriate product card via the select element
 var selector = document.getElementById("project_type");
@@ -65,10 +45,8 @@ selector.addEventListener("change", function(){
     setTimeout(() => {  $curProductCard.fadeIn(); }, 600);
     if(selection === "residential"){
         recommendResidential();
-    }else if(selection === "corporate") {
-        recommendCorporate();
-    }else if (selection === "hybrid") {
-        recommendHybrid();
+    }else if(selection !== "commercial") {
+        recommendElevators(selection);
     }
 })
 
