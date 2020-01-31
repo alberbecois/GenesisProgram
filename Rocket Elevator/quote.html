@@ -23,11 +23,6 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
-		<script>
-			$(document).ready(function() {
-				$(".productselection").hide;
-			});
-		</script>
 	</head>
 
 	<!--
@@ -224,7 +219,7 @@
                                 <option value ="hybrid">Hybrid</option>
                             </select>
                             <div class="row">
-                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 productselection" id="residential">
+                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="residential">
                                     <div class="card-heading card-heading-transparent">
                                         <h2 class="card-title bold">Residential</h2>
                                     </div>
@@ -240,7 +235,7 @@
                                         <input type="text" value="0" min="0" class="form-control stepper">
                                     </div>
                                 </div>
-                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 productselection" id="commercial">
+                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="commercial">
                                     <div class="card-heading card-heading-transparent">
                                         <h2 class="card-title bold">Commercial</h2>
                                     </div>
@@ -262,7 +257,7 @@
                                         <input type="text" value="1" min="1" class="form-control stepper">
                                     </div>
                                 </div>
-                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 productselection" id="corporate">
+                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="corporate">
                                     <div class="card-heading card-heading-transparent">
                                         <h2 class="card-title bold">Corporate</h2>
                                     </div>
@@ -284,7 +279,7 @@
                                         <input type="text" value="10" min="1" class="form-control stepper">
                                     </div>
                                 </div>
-                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 productselection" id="hybrid">
+                                <div class="card card-default col-md-7 mt-30 pl-0 pr-0 ml-15 quoter" id="hybrid">
                                     <div class="card-heading card-heading-transparent">
                                         <h2 class="card-title bold">Hybrid</h2>
                                     </div>
@@ -309,7 +304,7 @@
                                         <input type="text" value="10" min="1" class="form-control stepper">
                                     </div>
                                 </div>
-                                <div class="col-md-4 ml-25" style="border-left: 1px solid lightgray;">
+                                <div class="col-md-4 ml-25 quoter" style="border-left: 1px solid lightgray;">
                                     <div class="card card-default ml-20" id="calculator">
                                         <p>Content</p>
                                     </div>
@@ -409,6 +404,10 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+
+		<script>
+			$(".quoter").hide();
+		</script>
 	
 	</body>
 </html>
