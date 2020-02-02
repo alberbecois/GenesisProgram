@@ -17,10 +17,10 @@ function recommendResidential(){
 
 // Calculate recommended elevators for Corporate or Hybrid
 function recommendElevators(quoteType){
-    var floors = $(`${quoteType}floors`).val();
-    var basements = $(`${quoteType}basements`).val();
+    var floors = $(`#${quoteType}floors`).val();
+    var basements = $(`#${quoteType}basements`).val();
     var columns = Math.ceil((floors + basements) / 20);
-    var totalOccupants = floors * ($(`${quoteType}occupants`).val());
+    var totalOccupants = floors * ($(`#${quoteType}occupants`).val());
     var elevators = Math.ceil(totalOccupants / 1000);
     var totalElevators = Math.ceil(elevators / columns) * columns;
 
@@ -38,7 +38,6 @@ var selection;
 
 selector.addEventListener("change", function(){
     selection = selector.value;
-    console.log(selection);
     $(".quoter").fadeOut();
     var curProductCard = "#" + selection;
     var $curProductCard = $(curProductCard);
@@ -53,4 +52,9 @@ selector.addEventListener("change", function(){
 // Recalculate recommended elevators for residential when steppers change
 $(".resinput").change(function(){
     recommendResidential();
+});
+
+// Recalculate recommended elevators for corporate or hybrid when steppers change
+$(".recommendinput").change(function(){
+    recommendElevators(selection);
 });
