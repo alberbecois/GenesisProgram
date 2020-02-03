@@ -64,16 +64,40 @@ selector.addEventListener("change", function(){
 
 // Recalculate recommended elevators for residential when steppers change
 $(".resinput").change(function(){
+    if(isElevatorSelectionShowing === true){
+        $("#elevatorselection").fadeOut();
+        isElevatorSelectionShowing = false;
+    };
+    if(isFinalQuoteShowing === true){
+        $("#finalquote").fadeOut();
+        isFinalQuoteShowing = false;
+    }
     recommendResidential();
 });
 
 // Recalculate recommended elevators for corporate or hybrid when steppers change
 $(".recommendinput").change(function(){
+    if(isElevatorSelectionShowing === true){
+        $("#elevatorselection").fadeOut();
+        isElevatorSelectionShowing = false;
+    };
+    if(isFinalQuoteShowing === true){
+        $("#finalquote").fadeOut();
+        isFinalQuoteShowing = false;
+    }
     recommendElevators(selection);
 });
 
 // Recalculate pricing for Commercial
 $("#commercialelevators").change(function(){
+    if(isElevatorSelectionShowing === true){
+        $("#elevatorselection").fadeOut();
+        isElevatorSelectionShowing = false;
+    };
+    if(isFinalQuoteShowing === true){
+        $("#finalquote").fadeOut();
+        isFinalQuoteShowing = false;
+    }
     setElevators();
 });
 
