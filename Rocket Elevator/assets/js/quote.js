@@ -39,6 +39,7 @@ var selection;
 selector.addEventListener("change", function(){
     selection = selector.value;
     $(".quoter").fadeOut();
+    isElevatorSelectionShowing = false;
     var curProductCard = "#" + selection;
     var $curProductCard = $(curProductCard);
     setTimeout(() => {  $curProductCard.fadeIn(); }, 600);
@@ -57,4 +58,16 @@ $(".resinput").change(function(){
 // Recalculate recommended elevators for corporate or hybrid when steppers change
 $(".recommendinput").change(function(){
     recommendElevators(selection);
+});
+
+// Next button displays the Elevator Selector card
+
+var $nextButtons = $(".nextbutton");
+var isElevatorSelectionShowing = false;
+
+$($nextButtons).click(function(){
+    if(isElevatorSelectionShowing === false){
+        $("#elevatorselection").fadeIn();
+        isElevatorSelectionShowing = true;
+    }
 });
