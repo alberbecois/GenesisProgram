@@ -232,13 +232,10 @@
 										</div>
 										<div class="p-20">
 											<label>How many apartments does your building have?</label>
-											<!-- stepper -->
 											<input type="number" value="1" min="1" class="form-control resinput" id="resapartments">
 											<label class="mt-20">How many floors are there in the building?</label>
-											<!-- stepper -->
 											<input type="number" value="2" min="2" class="form-control resinput" id="resfloors">
 											<label class="mt-20">How many basements are there?</label>
-											<!-- stepper -->
 											<input type="number" value="0" min="0" class="form-control">
 											<div class="row">
 												<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="restotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="resplural"></span>.</p>
@@ -252,20 +249,15 @@
 										</div>
 										<div class="p-20">
 											<label>How many businesses are there in your building?</label>
-											<!-- stepper -->
 											<input type="text" value="1" min="1" class="form-control stepper">
 											<label class="mt-20">How many floors are there in the building?</label>
-											<!-- stepper -->
 											<input type="text" value="2" min="2" class="form-control stepper">
 											<label class="mt-20">How many basements are there?</label>
-											<!-- stepper -->
 											<input type="text" value="0" min="0" class="form-control stepper">
 											<label class="mt-20">How many parking spaces are available?</label>
-											<!-- stepper -->
 											<input type="text" value="0" min="0" class="form-control stepper">
 											<label class="mt-20">How many elevator cages are to be deployed?</label>
-											<!-- stepper -->
-											<input type="text" value="1" min="1" class="form-control stepper">
+											<input type="text" value="1" min="1" class="form-control stepper" id="commercialelevators">
 											<div class="row">
 												<button type="button" class="btn btn-primary btn-round mt-30 ml-auto mr-15 nextbutton">Next Step</button>
 											</div>
@@ -277,19 +269,14 @@
 										</div>
 										<div class="p-20">
 											<label>How many tenant companies does your building accommodate?</label>
-											<!-- stepper -->
-											<input type="number" value="1" min="1" class="form-control recommendinput" id="corporatefloors">
+											<input type="number" value="1" min="1" class="form-control recommendinput">
 											<label class="mt-20">How many floors are there in the building?</label>
-											<!-- stepper -->
-											<input type="number" value="2" min="2" class="form-control recommendinput" id="corporatebasements">
+											<input type="number" value="2" min="2" class="form-control recommendinput" id="corporatefloors">
 											<label class="mt-20">How many basements are there?</label>
-											<!-- stepper -->
-											<input type="number" value="0" min="0" class="form-control">
+											<input type="number" value="0" min="0" class="form-control" id="corporatebasements">
 											<label class="mt-20">How many parking spaces are available?</label>
-											<!-- stepper -->
 											<input type="number" value="0" min="0" class="form-control">
 											<label class="mt-20">What is the maximum number of occupants (capacity) per floor?</label>
-											<!-- stepper -->
 											<input type="number" value="10" min="1" class="form-control recommendinput" id="corporateoccupants">
 											<div class="row">
 												<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="corporatetotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="corporateplural"></span>.</p>
@@ -303,22 +290,16 @@
 										</div>
 										<div class="p-20">
 											<label>How many distinct businesses are there in your building?</label>
-											<!-- stepper -->
-											<input type="number" value="1" min="1" class="form-control recommendinput" id="hybridfloors">
+											<input type="number" value="1" min="1" class="form-control recommendinput">
 											<label class="mt-20">How many floors are there in the building?</label>
-											<!-- stepper -->
-											<input type="number" value="2" min="2" class="form-control recommendinput" id="hybridbasements">
+											<input type="number" value="2" min="2" class="form-control recommendinput" id="hybridfloors">
 											<label class="mt-20">How many basements are there?</label>
-											<!-- stepper -->
-											<input type="number" value="0" min="0" class="form-control">
+											<input type="number" value="0" min="0" class="form-control" id="hybridbasements">
 											<label class="mt-20">How many parking spaces are available?</label>
-											<!-- stepper -->
 											<input type="number" value="0" min="0" class="form-control">
 											<label class="mt-20">What is the maximum number of occupants (capacity) per floor?</label>
-											<!-- stepper -->
 											<input type="number" value="10" min="1" class="form-control recommendinput" id="hybridoccupants">
 											<label class="mt-20">How many hours a day is your building active (open)?</label>
-											<!-- stepper -->
 											<input type="number" value="8" min="1" max="24" class="form-control">
 											<div class="row">
 												<p class="col-md-6 mt-30 ml-5 bold">We recommend <span class="fs-30 bold" id="hybridtotal" style="color: #1980B6;"></span> &nbsp;elevator<span id="hybridplural"></span>.</p>
@@ -347,26 +328,30 @@
 													<i></i> Excelium
 												</label>
 											</div>
+											<button type="button" class="btn btn-primary btn-round ml-auto mr-20 mb-20" id="calculate">Calculate</button>
 										</div>
 									</div>
 									<div class="row">
-										<div class="card card-default ml-15 col-md-12 pl-0 pr-0">
+										<div class="card card-default ml-15 col-md-12 pl-0 pr-0 quoter" id="finalquote">
 											<div class="card-heading card-heading-transparent">
 												<h2 class="card-title bold">Your Rocket Elevator Services</h2>
 											</div>
 											<div class="table-responsive p-20">
-												<table class="table">
+												<table class="table ml-15">
 													<tr>
-														<td>Elevators (Standard)</td>
-														<td>$1.00</td>
+														<td class="text-right">Elevators (<span id="selectedtype">Standard</span>)</td>
+														<td class="text-right">$ <span id="productprice">1.00</span></td>
 													</tr>
 													<tr>
-														<td>Installation</td>
-														<td>$1.00</td>
+														<td class="text-right">Installation</td>
+														<td class="text-right">$ <span id="installationprice">1.00</span></td>
 													</tr>
 												</table>
 											</div>
-											<p>Total: $2.00</p>
+											<div>
+												<p class="text-right fs-30 mr-15 ml-15" style="border-top: 2px solid lightgray;">Total (CAD): $ <span id="totalprice" style="color: #1980B6; font-weight: bold;">35000</span>
+												<p class="fs-10 mr-15 ml-30">*Please note that prices do not reflect taxes and are subject to change.</p>
+											</div>
 										</div>
 									</div>
 								</div>
