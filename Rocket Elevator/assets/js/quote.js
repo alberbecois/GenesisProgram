@@ -62,6 +62,11 @@ selector.addEventListener("change", function(){
     }
 })
 
+//Form validation error message
+    var $errormessage = $("<small></small>").addClass("text-danger").text("Input cannot be less than zero.");
+    var $errorreminder = $("<p></p>").addClass("text-danger").addClass("ml-20").text("Please correct highlighted fields.");
+    var errorMessageApplied = false;
+
 // Recalculate recommended elevators for residential when steppers change
 $(".resinput").change(function(){
     if(isElevatorSelectionShowing === true){
@@ -72,7 +77,18 @@ $(".resinput").change(function(){
         $("#finalquote").fadeOut();
         isFinalQuoteShowing = false;
     }
-    recommendResidential();
+    // Validate that key inputs are not below min values
+    if(this.value < 0){
+        $(this).addClass("error").after($errormessage);
+        errorMessageApplied = true;
+    }else if(this.value > 0 && errorMessageApplied){
+        $(this).removeClass("error");
+        $(".text-danger").remove();
+        errorMessageApplied = false;
+        recommendResidential();
+    }else {
+        recommendResidential();
+    }
 });
 
 // Recalculate recommended elevators for corporate or hybrid when steppers change
@@ -107,11 +123,12 @@ var $nextButtons = $(".nextbutton");
 var isElevatorSelectionShowing = false;
 
 $($nextButtons).click(function(){
-    if(isElevatorSelectionShowing === false){
+    if(isElevatorSelectionShowing === false && errorMessageApplied === false){
         $("#elevatorselection").fadeIn();
         isElevatorSelectionShowing = true;
-    }
+    }else $nextButtons.after($errorreminder);
 });
+
 
 // Final Calculator
 function updateTotal(){
