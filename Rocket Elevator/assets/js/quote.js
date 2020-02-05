@@ -101,7 +101,17 @@ $(".recommendinput").change(function(){
         $("#finalquote").fadeOut();
         isFinalQuoteShowing = false;
     }
-    recommendElevators(selection);
+    if(this.value < 0){
+        $(this).addClass("error").after($errormessage);
+        errorMessageApplied = true;
+    }else if(this.value > 0 && errorMessageApplied){
+        $(this).removeClass("error");
+        $(".text-danger").remove();
+        errorMessageApplied = false;
+        recommendElevators(selection);
+    }else {
+        recommendElevators(selection);
+    }
 });
 
 // Recalculate pricing for Commercial
