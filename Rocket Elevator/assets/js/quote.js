@@ -124,7 +124,17 @@ $("#commercialelevators").change(function(){
         $("#finalquote").fadeOut();
         isFinalQuoteShowing = false;
     }
-    setElevators();
+    if(this.value < 0){
+        $(this).addClass("error").after($errormessage);
+        errorMessageApplied = true;
+    }else if(this.value > 0 && errorMessageApplied){
+        $(this).removeClass("error");
+        $(".text-danger").remove();
+        errorMessageApplied = false;
+        setElevators();
+    }else {
+        setElevators();
+    }
 });
 
 // Next button displays the Elevator Selector card
