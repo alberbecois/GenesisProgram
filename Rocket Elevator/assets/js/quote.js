@@ -88,6 +88,7 @@ $(".resinput").change(function(){
         errorMessageApplied = false;
         recommendResidential();
     }else {
+        $(this).removeClass("error");
         recommendResidential();
     }
 });
@@ -113,6 +114,7 @@ $(".recommendinput").change(function(){
         errorMessageApplied = false;
         recommendElevators(selection);
     }else {
+        $(this).removeClass("error");
         recommendElevators(selection);
     }
 });
