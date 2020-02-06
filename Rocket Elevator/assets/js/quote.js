@@ -84,6 +84,7 @@ $(".resinput").change(function(){
     }else if(this.value > 0 && errorMessageApplied){
         $(this).removeClass("error");
         $(".text-danger").remove();
+        isErrorReminderShowing = false;
         errorMessageApplied = false;
         recommendResidential();
     }else {
@@ -101,12 +102,14 @@ $(".recommendinput").change(function(){
         $("#finalquote").fadeOut();
         isFinalQuoteShowing = false;
     }
+    // Validate that key inputs are not below min values
     if(this.value < 0){
         $(this).addClass("error").after($errormessage);
         errorMessageApplied = true;
     }else if(this.value > 0 && errorMessageApplied){
         $(this).removeClass("error");
         $(".text-danger").remove();
+        isErrorReminderShowing = false;
         errorMessageApplied = false;
         recommendElevators(selection);
     }else {
@@ -124,12 +127,14 @@ $("#commercialelevators").change(function(){
         $("#finalquote").fadeOut();
         isFinalQuoteShowing = false;
     }
+    // Validate that key inputs are not below min values
     if(this.value < 0){
         $(this).addClass("error").after($errormessage);
         errorMessageApplied = true;
     }else if(this.value > 0 && errorMessageApplied){
         $(this).removeClass("error");
         $(".text-danger").remove();
+        isErrorReminderShowing = false;
         errorMessageApplied = false;
         setElevators();
     }else {
@@ -141,12 +146,16 @@ $("#commercialelevators").change(function(){
 
 var $nextButtons = $(".nextbutton");
 var isElevatorSelectionShowing = false;
+var isErrorReminderShowing = false;
 
 $($nextButtons).click(function(){
     if(isElevatorSelectionShowing === false && errorMessageApplied === false){
         $("#elevatorselection").fadeIn();
         isElevatorSelectionShowing = true;
-    }else $nextButtons.after($errorreminder);
+    }else if(isElevatorSelectionShowing === false && errorMessageApplied && isErrorReminderShowing === false){
+        $nextButtons.after($errorreminder);
+        isErrorReminderShowing = true;
+    }
 });
 
 
