@@ -200,11 +200,32 @@ $($nextButtons).click(function(){
     }
 }; */
 
-// Node.js version of updateTotal
-function updateTotal(){
+// Update the Quote card
+function setQuote(price, installation, total){
     var selectedElevator = document.querySelector('input[name="elevatortype"]:checked').value;
-    $.getJSON(`https://webdevbootcamp-rxeif.run-us-west2.goorm.io/${selectedElevator}/${quotedElevators}`, function(){
-        
+    if(selectedElevator === "standard"){
+        document.getElementById("selectedtype").innerHTML = "Standard";
+        document.getElementById("productprice").innerHTML = price;
+        document.getElementById("installationprice").innerHTML = installation;
+        document.getElementById("totalprice").innerHTML = total;
+    }else if(selectedElevator === "premium"){
+        document.getElementById("selectedtype").innerHTML = "Premium";
+        document.getElementById("productprice").innerHTML = price;
+        document.getElementById("installationprice").innerHTML = installation;
+        document.getElementById("totalprice").innerHTML = total;
+    }else {
+        document.getElementById("selectedtype").innerHTML = "Excelium";
+        document.getElementById("productprice").innerHTML = price;
+        document.getElementById("installationprice").innerHTML = installation;
+        document.getElementById("totalprice").innerHTML = total;
+    }
+}
+
+// Node.js version of updateTotal
+function getQuote(){
+    var selectedElevator = document.querySelector('input[name="elevatortype"]:checked').value;
+    $.getJSON(`https://webdevbootcamp-rxeif.run-us-west2.goorm.io/${selectedElevator}/${quotedElevators}`, function(data, status){
+        setQuote(data.price, data.installation, data.total);
     });
 }
 
@@ -214,11 +235,11 @@ var isFinalQuoteShowing = false;
 
 $("#calculate").click(function(){
     if(isFinalQuoteShowing === false){
-        updateTotal();
+        getQuote();
         $("#finalquote").fadeIn();
         isFinalQuoteShowing = true;
     }
     else{
-        updateTotal();
+        getQuote();
     }
 })
