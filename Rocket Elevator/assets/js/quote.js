@@ -162,7 +162,7 @@ $($nextButtons).click(function(){
 
 
 // Final Calculator
-function updateTotal(){
+/* function updateTotal(){
     var selectedElevator = document.querySelector('input[name="elevatortype"]:checked').value;
     if(selectedElevator === "standard"){
         var elevatorPrice = quotedElevators * 7565;
@@ -198,7 +198,15 @@ function updateTotal(){
         var totalString = totalPrice.toFixed(2);
         document.getElementById("totalprice").innerHTML = totalString;
     }
-};
+}; */
+
+// Node.js version of updateTotal
+function updateTotal(){
+    var selectedElevator = document.querySelector('input[name="elevatortype"]:checked').value;
+    $.getJSON(`https://webdevbootcamp-rxeif.run-us-west2.goorm.io/${selectedElevator}/${quotedElevators}`, function(){
+        
+    });
+}
 
 // Displays Final Quote
 
