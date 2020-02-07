@@ -224,7 +224,7 @@ function setQuote(price, installation, total){
 // Node.js version of updateTotal
 function getQuote(){
     var selectedElevator = document.querySelector('input[name="elevatortype"]:checked').value;
-    $.getJSON(`https://webdevbootcamp-rxeif.run-us-west2.goorm.io/${selectedElevator}/${quotedElevators}`, function(data, status){
+    $.getJSON(`http://ec2-99-79-42-240.ca-central-1.compute.amazonaws.com:3000/${selectedElevator}/${quotedElevators}`, function(data, status){
         setQuote(data.price, data.installation, data.total);
     });
 }
